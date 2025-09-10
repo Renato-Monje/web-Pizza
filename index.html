@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inca Pizza - Villa El Salvador | Pizzería Peruana</title>
+    <link rel="stylesheet" href="esti.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="#" class="logo">🍕 Inca Pizza</a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#menu">Menú</a></li>
+                    <li><a href="#ubicacion">Ubicación</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#" onclick="toggleCart()">🛒 Carrito</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Inca Pizza</h1>
+            <p>La mejor fusión peruana en cada bocado</p>
+            <div class="location-badge">
+                📍 Villa El Salvador, Lima - Perú
+            </div>
+            <a href="#menu" class="cta-button">Ver Nuestro Menú</a>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="section">
+        <div class="container">
+            <h2 class="section-title">Nuestras Pizzas Especiales</h2>
+            <div class="menu-grid">
+                <div class="pizza-card">
+                    <img src="foto/aji gall.jfif" alt="">
+                    <div class="pizza-info">
+                        <h3 class="pizza-name">Pizza Ají de Gallina</h3>
+                        <p class="pizza-description">Base de crema de ají amarillo, pollo desmechado, papa amarilla, aceitunas negras y queso mozzarella.</p>
+                        <div class="pizza-footer">
+                            <span class="pizza-price">S/ 32.00</span>
+                            <button class="add-to-cart" onclick="addToCart(1, 'Pizza Ají de Gallina', 32.00)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pizza-card">
+                    <img src="foto/lomo.jpg" alt="">
+                    <div class="pizza-info">
+                        <h3 class="pizza-name">Pizza Lomo Saltado</h3>
+                        <p class="pizza-description">Lomo fino saltado, cebolla morada, tomate, papas fritas, salsa de soya y queso mozzarella.</p>
+                        <div class="pizza-footer">
+                            <span class="pizza-price">S/ 38.00</span>
+                            <button class="add-to-cart" onclick="addToCart(2, 'Pizza Lomo Saltado', 38.00)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pizza-card">
+                    <img src="foto/anticuchera.jpg" alt="">
+                    <div class="pizza-info">
+                        <h3 class="pizza-name">Pizza Anticuchera</h3>
+                        <p class="pizza-description">Corazón de res marinado en ají panca, choclo, camote y salsa anticuchera con queso mozzarella.</p>
+                        <div class="pizza-footer">
+                            <span class="pizza-price">S/ 35.00</span>
+                            <button class="add-to-cart" onclick="addToCart(3, 'Pizza Anticuchera', 35.00)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pizza-card">
+                    <img src="foto/criolla.jfif" alt="">
+                    <div class="pizza-info">
+                        <h3 class="pizza-name">Pizza Criolla</h3>
+                        <p class="pizza-description">Base de tacu tacu, chorizo, huevo frito, salsa criolla y queso fresco peruano.</p>
+                        <div class="pizza-footer">
+                            <span class="pizza-price">S/ 30.00</span>
+                            <button class="add-to-cart" onclick="addToCart(4, 'Pizza Criolla', 30.00)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pizza-card">
+                    <img src="foto/Amazónica.jpg" alt="">
+                    <div class="pizza-info">
+                        <h3 class="pizza-name">Pizza Amazónica</h3>
+                        <p class="pizza-description">Cecina de la selva, plátano maduro, yuca, cilantro y queso amazonico con salsa de cocona.</p>
+                        <div class="pizza-footer">
+                            <span class="pizza-price">S/ 36.00</span>
+                            <button class="add-to-cart" onclick="addToCart(5, 'Pizza Amazónica', 36.00)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pizza-card">
+                    <img src="foto/marga.jpg" alt="">
+                    <div class="pizza-info">
+                        <h3 class="pizza-name">Pizza Margherita Peruana</h3>
+                        <p class="pizza-description">Salsa de tomate, albahaca peruana, queso fresco de cabra y aceite de oliva extra virgen.</p>
+                        <div class="pizza-footer">
+                            <span class="pizza-price">S/ 28.00</span>
+                            <button class="add-to-cart" onclick="addToCart(6, 'Pizza Margherita Peruana', 28.00)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="ubicacion" class="section map-section">
+        <div class="container">
+            <h2 class="section-title">Nuestra Ubicación</h2>
+            <div class="map-container">
+                <div class="map-info">
+                    <h3>📍 Encuéntranos en Villa El Salvador</h3>
+                    <p class="address">
+                        Av. Juan Velasco Alvarado 1234<br>
+                        Villa El Salvador, Lima 15067<br>
+                        Perú
+                    </p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="contact-icon">📞</span>
+                            <div>
+                                <strong>Teléfono:</strong><br>
+                                (01) 287-5432
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📱</span>
+                            <div>
+                                <strong>WhatsApp:</strong><br>
+                                +51 987 654 321
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">🕒</span>
+                            <div>
+                                <strong>Horarios:</strong><br>
+                                Lun-Dom: 6:00pm - 11:30pm
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">🚚</span>
+                            <div>
+                                <strong>Delivery:</strong><br>
+                                Gratis por compras >S/50
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-placeholder">
+                    <div style="text-align: center; color: white;">
+                        <div style="font-size: 4rem; margin-bottom: 1rem;">📍</div>
+                        <div style="font-size: 1.5rem;">Villa El Salvador</div>
+                        <div style="font-size: 1rem; margin-top: 0.5rem;">Lima, Perú</div>
+                        <div style="font-size: 0.9rem; margin-top: 1rem; opacity: 0.8;">
+                            Coordenadas GPS:<br>
+                            -12.2120, -76.9419
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="section">
+        <div class="container">
+            <h2 class="section-title">Contáctanos</h2>
+            <div class="contact-form">
+                <div class="success-message" id="successMessage">
+                    ¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.
+                </div>
+                <form id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nombre">Nombre Completo *</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono">Teléfono *</label>
+                            <input type="tel" id="telefono" name="telefono" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="distrito">Distrito</label>
+                            <select id="distrito" name="distrito">
+                                <option value="">Selecciona tu distrito</option>
+                                <option value="villa-el-salvador">Villa El Salvador</option>
+                                <option value="san-juan-miraflores">San Juan de Miraflores</option>
+                                <option value="chorrillos">Chorrillos</option>
+                                <option value="villa-maria-del-triunfo">Villa María del Triunfo</option>
+                                <option value="otros">Otros</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="tipo-consulta">Tipo de Consulta</label>
+                            <select id="tipo-consulta" name="tipo-consulta">
+                                <option value="">Selecciona una opción</option>
+                                <option value="pedido">Realizar Pedido</option>
+                                <option value="delivery">Consulta sobre Delivery</option>
+                                <option value="evento">Eventos y Celebraciones</option>
+                                <option value="sugerencia">Sugerencias</option>
+                                <option value="otros">Otros</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje *</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Cuéntanos en qué podemos ayudarte..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Inca Pizza - Villa El Salvador. Todos los derechos reservados.</p>
+            <p>🍕 La mejor pizza peruana de Lima 🇵🇪</p>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3 class="cart-title">🛒 Mi Pedido</h3>
+            <button class="close-cart" onclick="toggleCart()">&times;</button>
+        </div>
+        <div id="cartItems">
+            <p style="text-align: center; color: #999; padding: 2rem;">Tu carrito está vacío</p>
+        </div>
+        <div class="cart-total" id="cartTotal" style="display: none;">
+            Total: S/ 0.00
+        </div>
+        <button class="checkout-btn" onclick="proceedToCheckout()" style="display: none;" id="checkoutBtn">
+            Proceder al Pago
+        </button>
+    </div>
+
+    <!-- Cart Toggle Button -->
+    <button class="cart-toggle" onclick="toggleCart()">
+        🛒
+        <span class="cart-count" id="cartCount" style="display: none;">0</span>
+    </button>
+
+    <script src="java.js"></script>
+</body>
+</html>
